@@ -42,9 +42,10 @@ async def help(event):
                       [Button.url('Beni Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
                       [Button.url('Support👨‍💻', 'https://t.me/LuciSup')],
                       [Button.url('Resmi Kanal🔖', 'https://t.me/LuciBots')],
-		      [Button.url('Developer🧑‍🔧', 'https://t.me/LuciMarka')],
+			    
+		      [ Düğme . url ( 'Geliştirici🧑‍🔧'        ' ),https://t.me/nevarevladim]
                     ),
-                    link_preview=False
+                    link_preview      =      Yanlış
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
@@ -233,7 +234,7 @@ async def mentionall(event):
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
         await event.respond("**Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌****")
-        return
+        dönüş
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
