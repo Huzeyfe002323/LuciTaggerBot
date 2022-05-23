@@ -39,7 +39,7 @@ async def help(event):
   helptext = "**🌀 LuciTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
+                      [Button.url('Beni Gruba Ekle➕', '?startgroup=a')],
                       [Button.url('Support👨‍💻', 'https://t.me/nevarevladim')],
                       [Button.url('Resmi Kanal🔖', 'https://t.me/nevarevladim')],
 			    
@@ -168,7 +168,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir **❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
