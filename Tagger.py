@@ -27,7 +27,7 @@ async def start(event):
   await event.reply("**🌀LuciTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/lucitaggerbot?startgroup=a')],
+		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/nevarevladim?startgroup=a')],
                       [Button.url('Support🛠', 'https://t.me/nevarevladim')],
                       [Button.url('Resmi Kanal📣', 'https://t.me/nevarevladim')],
 		      [ Düğme . url ( 'Geliştirici👨🏻‍💻' , 'https://t.me/nevarevladim' )],
@@ -43,17 +43,17 @@ async def help(event):
                       [Button.url('Support👨‍💻', 'https://t.me/nevarevladim')],
                       [Button.url('Resmi Kanal🔖', 'https://t.me/nevarevladim')],
 			    
-		      [ Düğme . url ( 'Geliştirici🧑‍🔧'        ' ),https://t.me/nevarevladim]
+		      [ Düğme . url ( 'Geliştirici🧑‍🔧'        ' ),https://t.me/nevarevladim')],
                     ),
                     link_preview      =      Yanlış
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @LuciTaggerBot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @utagbot_bot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
+                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/@utagbot_bot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -120,7 +120,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @baska_zamana**❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
